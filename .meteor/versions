@@ -22,7 +22,7 @@ callback-hook@1.0.9
 check@1.2.3
 coffeescript@1.2.4_1
 cultofcoders:grapher@1.0.10
-cultofcoders:grapher-live@0.0.3
+cultofcoders:grapher-live@0.0.4
 cultofcoders:grapher-react@0.0.2
 dburles:collection-helpers@1.0.4
 dburles:mongo-collection-instances@0.3.5
@@ -49,6 +49,7 @@ jquery@1.11.9
 kadira:flow-router@2.12.1
 lai:collection-extensions@0.2.1_1
 launch-screen@1.0.12
+less@2.7.5
 livedata@1.0.18
 localstorage@1.0.11
 logging@1.1.15

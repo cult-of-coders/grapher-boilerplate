@@ -3,13 +3,13 @@ import Users from '/imports/api/users/collection.js';
 import Posts from '/imports/api/posts/collection.js';
 
 Comments.addLinks({
-    'user': {
+    user: {
         type: 'one',
         collection: Users,
         field: 'userId',
         index: true
     },
-    'post': {
+    post: {
         type: 'one',
         collection: Posts,
         field: 'postId',

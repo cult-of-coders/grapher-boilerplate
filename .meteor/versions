@@ -23,7 +23,7 @@ check@1.2.3
 coffeescript@1.0.17
 cultofcoders:grapher@1.0.8
 cultofcoders:grapher-live@0.0.3
-cultofcoders:grapher-react@0.0.1
+cultofcoders:grapher-react@0.0.2
 dburles:collection-helpers@1.0.4
 dburles:mongo-collection-instances@0.3.5
 ddp@1.2.5

@@ -6,7 +6,7 @@ class App extends React.Component {
     render() {
         const {isLoggingIn, isReady, main, routeProps} = this.props;
 
-        if (!isReady) {
+        if (!isReady || isLoggingIn) {
             return (
                 <div className="logging-in-overlay">
                     Loading

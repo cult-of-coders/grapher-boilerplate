@@ -5,6 +5,9 @@ import Posts from '/imports/api/posts/collection';
 const USERS = 10;
 const POST_PER_USER = 20;
 const COMMENTS_PER_POST = 10;
+const COMMENT_TEXT_SAMPLES = [
+    'Good', 'Bad', 'Neutral'
+];
 
 Meteor.startup(() => {
     if (Users.find().count() > 0) {
@@ -47,7 +50,7 @@ Meteor.startup(() => {
 
                 _.each(_.range(COMMENTS_PER_POST), (idx) => {
                     let comment = {
-                        text: 'Random comment'
+                        text: _.sample(COMMENT_TEXT_SAMPLES)
                     };
 
                     postCommentsLink.add(comment);

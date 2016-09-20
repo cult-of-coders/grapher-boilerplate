@@ -14,6 +14,7 @@ Start the app
 ```
 git clone https://github.com/cult-of-coders/grapher-boilerplate
 cd grapher-boilerplate
+meteor npm install
 meteor
 ```
 

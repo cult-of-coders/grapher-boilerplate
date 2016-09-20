@@ -6,11 +6,13 @@ Comments.addLinks({
     'user': {
         type: 'one',
         collection: Users,
-        field: 'userId'
+        field: 'userId',
+        index: true
     },
     'post': {
         type: 'one',
         collection: Posts,
-        field: 'postId'
+        field: 'postId',
+        index: true
     }
 });

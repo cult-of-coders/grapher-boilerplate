@@ -6,7 +6,8 @@ Posts.addLinks({
     'owner': {
         type: 'one',
         collection: Users,
-        field: 'ownerId'
+        field: 'ownerId',
+        index: true
     },
     'comments': {
         collection: Comments,

@@ -8,4 +8,13 @@ In order to make it work with module structure you need to:
 and both need each other, leading to a inter-dependency and getting objects such as {__esModule: true, default: xxx}
 
 
+Start the app
+=============
 
+```
+git clone https://github.com/cult-of-coders/grapher-boilerplate
+cd grapher-boilerplate
+meteor
+```
+
+Have fun!

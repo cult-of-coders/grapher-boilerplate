@@ -5,6 +5,7 @@ import '/imports/api/links.js';
 
 import '/imports/api/users/expose.js';
 import '/imports/api/posts/expose.js';
+import '/imports/api/groups/expose.js';
 
 import './fixtures.js';
 import './grapher-live.js';

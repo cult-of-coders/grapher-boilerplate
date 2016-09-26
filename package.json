@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "bcrypt": "^0.8.7",
+    "bootstrap": "^3.3.7",
     "faker": "^3.1.0",
     "meteor-node-stubs": "~0.2.0",
     "object-sizeof": "^1.1.1",
@@ -13,6 +14,7 @@
     "react-ace": "^3.5.0",
     "react-addons-pure-render-mixin": "^15.3.1",
     "react-dom": "^15.3.1",
+    "react-js-pagination": "^2.0.0",
     "react-json-pretty": "^1.2.1",
     "react-mounter": "^1.2.0",
     "sift": "^3.2.6"

@@ -16,13 +16,26 @@ class App extends React.Component {
 
         return (
             <div className="app-container">
-                <div className="topbar">
-                    <a href="/">Home</a>
-                    &nbsp;
-                    <a href="/grapher" target="_blank">Grapher Live</a>
-                    &nbsp;
-                    <a href="/demo">Demo</a>
-                </div>
+                <nav className="navbar">
+                    <div className="container">
+                        <div id="navbar" className="collapse navbar-collapse">
+                            <ul className="nav navbar-nav">
+                                <li>
+                                    <a href="/grapher" target="_blank">Grapher Live</a>
+                                </li>
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/demo">Demo</a>
+                                </li>
+                                <li>
+                                    <a href="/demo-paginate">Demo Pagination</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
                 {React.createElement(main, routeProps)}
             </div>
         )

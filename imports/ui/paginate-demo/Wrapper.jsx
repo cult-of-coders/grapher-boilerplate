@@ -16,14 +16,20 @@ const PostsList = ({data, loading, error}) => {
         <ul>
             {
                 _.map(data, post => {
-                    return <li key={post._id}>{post.title}</li>
+                    return (
+                        <li key={post._id}>
+                            {post.title} - {post.owner ? post.owner.emails[0].address : 'User not found.'}
+                        </li>
+                    )
                 })
             }
         </ul>
     )
 };
 
-const PostsListContainer = createQueryContainer(commentsQuery, PostsList);
+const PostsListContainer = createQueryContainer(commentsQuery, PostsList, {
+    reactive: true
+});
 
 export default class Wrapper extends React.Component {
     constructor() {
@@ -68,8 +74,6 @@ export default class Wrapper extends React.Component {
         FlowRouter.setParams({page});
 
         commentsQuery.getCount((err, res) => {
-            console.log(res);
-
             this.setState({total: res});
         })
     }

@@ -3,12 +3,14 @@ import React from 'react';
 export default class extends React.Component {
     render() {
         return (
-            <div>
+            <div className="text-center">
                 <h1>Welcome to the Boilerplate</h1>
 
-                <h2>Fixtures are loaded from "/imports/startup/server/fixtures.js"</h2>
+                <h4>Fixtures are loaded from "/imports/startup/server/fixtures.js"</h4>
 
-                <h2>Sample Query you can use in Grapher Live</h2>
+                <hr/>
+
+                <h4>Sample Query you can use in Grapher Live:</h4>
 
                 <SampleQuery />
             </div>
@@ -20,15 +22,15 @@ const SampleQuery = () => {
     const query =  `
 {
     users: {
-        $all: true,
-            comments: {
+        emails: 1,
+        comments: {
             $options: {limit: 5},
             text: 1
         },
         posts: {
             $options: {limit: 5},
-            $all: true,
-                comments: {
+            title: 1,
+            comments: {
                 $options: {limit: 5},
                 text: 1
             }
@@ -36,5 +38,5 @@ const SampleQuery = () => {
     }
 }`;
 
-    return <pre>{query}</pre>
+    return <pre style={{textAlign: 'left'}}>{query}</pre>
 };

@@ -6,6 +6,9 @@ export default createQuery({
             options.skip = params.skip;
             options.limit = params.limit;
         },
-        title: 1
+        title: 1,
+        owner: {
+            emails: 1
+        }
     }
 });

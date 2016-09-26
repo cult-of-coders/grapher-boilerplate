@@ -20,8 +20,8 @@ class App extends React.Component {
                     <div className="container">
                         <div id="navbar" className="collapse navbar-collapse">
                             <ul className="nav navbar-nav">
-                                <li>
-                                    <a href="/grapher" target="_blank">Grapher Live</a>
+                                <li className="logo">
+                                    <img src="/logo.png" alt="Logo" />
                                 </li>
                                 <li>
                                     <a href="/">Home</a>
@@ -32,11 +32,16 @@ class App extends React.Component {
                                 <li>
                                     <a href="/demo-paginate">Demo Pagination</a>
                                 </li>
+                                <li>
+                                    <a href="/grapher" target="_blank">Grapher Live!</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                {React.createElement(main, routeProps)}
+                <div className="container">
+                    {React.createElement(main, routeProps)}
+                </div>
             </div>
         )
     }

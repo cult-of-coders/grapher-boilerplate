@@ -25,9 +25,9 @@ class Comments extends React.Component {
     }
 }
 
-const Comment = ({comment}) => (
-    <li>{comment.text} - by {comment.user.emails[0].address}</li>
-);
+const Comment = ({comment}) => {
+    return <li>{comment.text} - by {comment.user.emails[0].address}</li>
+};
 
 export default createQueryContainer(query, Comments, {
     reactive: true,

@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
+    "deploy:qa": "cd .deploy && mup deploy",
     "test": "meteor test-packages --driver-package practicalmeteor:mocha packages/grapher",
     "test-console": "meteor --once test-packages --driver-package dispatch:mocha-phantomjs packages/grapher",
     "test-console-watch": "TEST_WATCH=1 meteor test-packages --driver-package dispatch:mocha-phantomjs packages/grapher"

@@ -2,6 +2,7 @@ import '/imports/api/users/security.js';
 import '/imports/api/users/self.js';
 
 import '/imports/api/links.js';
+import '/imports/api/namedQueries';
 
 import '/imports/api/users/expose.js';
 import '/imports/api/posts/expose.js';

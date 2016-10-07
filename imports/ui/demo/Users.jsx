@@ -28,6 +28,6 @@ const User = ({user, onClick}) => (
     </li>
 );
 
-export default createQueryContainer(query, Users, {
+export default createQueryContainer(query.clone(), Users, {
     reactive: true
 });

@@ -29,7 +29,7 @@ const Comment = ({comment}) => {
     return <li>{comment.text} - by {comment.user.emails[0].address}</li>
 };
 
-export default createQueryContainer(query, Comments, {
+export default createQueryContainer(query.clone(), Comments, {
     reactive: true,
     single: true // we use this because we expect one object. a post, that contains the comments.
 });

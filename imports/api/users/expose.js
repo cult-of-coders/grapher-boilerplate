@@ -1,6 +1,8 @@
 import Users from './collection.js';
 import { Exposure } from 'meteor/cultofcoders:grapher';
 
-Users.expose((filters, options, userId) => {
-    Exposure.restrictFields(filters, options, ['services', 'createdAt']);
+Users.expose({
+    firewall(filters, options, userId) {
+        Exposure.restrictFields(filters, options, ['services', 'createdAt']);
+    }
 });

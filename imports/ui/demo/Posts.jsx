@@ -30,6 +30,6 @@ const Post = ({post, onClick}) => (
     </li>
 );
 
-export default createQueryContainer(query, Posts, {
+export default createQueryContainer(query.clone(), Posts, {
     reactive: true
 });

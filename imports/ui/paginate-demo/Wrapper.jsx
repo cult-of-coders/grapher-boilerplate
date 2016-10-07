@@ -27,10 +27,6 @@ const PostsList = ({data, loading, error}) => {
     )
 };
 
-const PostsListContainer = createQueryContainer(commentsQuery, PostsList, {
-    reactive: true
-});
-
 export default class Wrapper extends React.Component {
     constructor() {
         super();
@@ -39,6 +35,11 @@ export default class Wrapper extends React.Component {
             perPage: 10,
             total: 0
         };
+        this.query = commentsQuery.clone();
+
+        this.PostsListContainer = createQueryContainer(this.query, PostsList, {
+            reactive: true
+        });
     }
 
     componentDidMount() {
@@ -50,6 +51,8 @@ export default class Wrapper extends React.Component {
             limit: this.state.perPage,
             skip: this.state.perPage * (this.state.page - 1)
         };
+
+        const PostsListContainer = this.PostsListContainer;
 
         return (
             <div>
@@ -73,7 +76,7 @@ export default class Wrapper extends React.Component {
 
         FlowRouter.setParams({page});
 
-        commentsQuery.getCount((err, res) => {
+        this.query.getCount((err, res) => {
             this.setState({total: res});
         })
     }

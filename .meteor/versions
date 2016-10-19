@@ -21,8 +21,8 @@ caching-html-compiler@1.0.7
 callback-hook@1.0.9
 check@1.2.3
 coffeescript@1.2.4_1
-cultofcoders:grapher@1.1.11
-cultofcoders:grapher-live@1.2.1
+cultofcoders:grapher@1.1.12
+cultofcoders:grapher-live@1.2.2
 cultofcoders:grapher-react@0.0.5
 dburles:collection-helpers@1.0.4
 dburles:mongo-collection-instances@0.3.5

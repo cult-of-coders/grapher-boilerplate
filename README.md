@@ -25,7 +25,7 @@ Architecture
 
 Based on: https://guide.meteor.com/structure.html
 
-
+```
 client
 └── main.js // Just a proxy for "/imports/startup/client"
 server
@@ -50,5 +50,6 @@ imports/api
 │   ├── expose.js // exposing your Mongo.Collection
 │   ├── links.js // linking information
 │   └── schema.js // schema for the collection
+```
 
 Have fun!

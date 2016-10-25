@@ -8,10 +8,13 @@ export default class extends React.Component {
 
                 <h4>
                     Read about the structure in the
+                    {' '}
                     <a href="https://github.com/cult-of-coders/grapher-boilerplate/blob/master/README.md" target="_blank">
                         README.md
                     </a>
-                    file</h4>
+                    {' '}
+                    file
+                </h4>
                 <h4>Fixtures are loaded from "/imports/startup/server/fixtures.js"</h4>
 
                 <hr/>

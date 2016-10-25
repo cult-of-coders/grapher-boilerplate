@@ -32,7 +32,7 @@ server
 └── main.js // Just a proxy for "/imports/startup/server"
 imports/startup
 ├── client
-│   └── index.js // Loads everything for the client on initila load
+│   └── index.js // Loads everything for the client on initial load
 └── server
     ├── fixtures.js // Demo Data
     ├── grapher-live.js // Initializer for Grapher Live
@@ -43,7 +43,7 @@ imports/api
 │   ├── index.js // loader for all the collections and linking information for each collection
 │   └── namedQueries
 │       ├── index.js // Loads all the namedQueries in the system. We do this so Grapher Documentation can know about our existing namedQueries
-│       ├── postsWithGroups.js // It is better to put it in: /imports/api/posts/namedQueries/postsWithGroups.js, this is just an example.
+│       ├── postsWithGroups.js // It is better to put it in: /imports/api/posts/namedQueries/postsWithGroups.js, this is just an example
 │       └── usersWithComments.js
 ├── {collectionName}
 │   ├── collection.js // instantiation of Mongo.Collection

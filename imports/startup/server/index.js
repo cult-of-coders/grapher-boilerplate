@@ -1,12 +1,11 @@
-import '/imports/api/users/security.js';
-import '/imports/api/users/self.js';
+// Imports all needed by grapher to be used
+import '/imports/api/grapher';
 
-import '/imports/api/links.js';
-import '/imports/api/namedQueries';
+// Note: the file below is not added on the client, exposure is a server-side concern.
+import '/imports/api/grapher/exposures';
 
-import '/imports/api/users/expose.js';
-import '/imports/api/posts/expose.js';
-import '/imports/api/groups/expose.js';
-
+// Loads the demo data
 import './fixtures.js';
+
+// Initializez grapher-live usage
 import './grapher-live.js';

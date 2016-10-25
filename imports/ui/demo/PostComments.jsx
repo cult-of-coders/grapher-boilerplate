@@ -1,7 +1,6 @@
 import React from 'react';
 import { createQueryContainer } from 'meteor/cultofcoders:grapher-react';
-import query from './query/postComments.js';
-import CommentsCollection from '/imports/api/comments/collection.js';
+import query from '/imports/api/posts/query/postComments.js';
 
 class Comments extends React.Component {
     render() {

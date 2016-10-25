@@ -1,5 +1,5 @@
 import React from 'react';
-import commentsQuery from './query/posts.js';
+import query from '/imports/api/posts/query/postsWithPagination.js';
 import { createQueryContainer } from 'meteor/cultofcoders:grapher-react';
 import Pagination from "react-js-pagination";
 
@@ -35,7 +35,7 @@ export default class Wrapper extends React.Component {
             perPage: 10,
             total: 0
         };
-        this.query = commentsQuery.clone();
+        this.query = query.clone();
 
         this.PostsListContainer = createQueryContainer(this.query, PostsList, {
             reactive: true

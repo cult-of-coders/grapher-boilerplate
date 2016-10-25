@@ -1,6 +1,6 @@
 import React from 'react';
 import { createQueryContainer } from 'meteor/cultofcoders:grapher-react';
-import query from './query/posts.js';
+import query from '/imports/api/posts/query/postsByOwner.js';
 
 class Posts extends React.Component {
     render() {

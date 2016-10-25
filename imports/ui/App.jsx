@@ -1,18 +1,9 @@
 import React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
-import { Meteor } from 'meteor/meteor';
 
-class App extends React.Component {
+export default class App extends React.Component {
     render() {
-        const {isLoggingIn, isReady, main, routeProps} = this.props;
-
-        if (!isReady || isLoggingIn) {
-            return (
-                <div className="logging-in-overlay">
-                    Loading
-                </div>
-            )
-        }
+        const {main, routeProps} = this.props;
 
         return (
             <div className="app-container">
@@ -46,13 +37,3 @@ class App extends React.Component {
         )
     }
 }
-
-export default createContainer((props = {}) => {
-    const subHandle = Meteor.subscribe('self');
-
-    return {
-        isReady: subHandle.ready(),
-        isLoggingIn: Meteor.loggingIn(),
-        ...props
-    }
-}, App);

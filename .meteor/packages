@@ -32,7 +32,6 @@ dburles:collection-helpers
 cultofcoders:grapher
 cultofcoders:grapher-react
 cultofcoders:grapher-live
-cultofcoders:redis-oplog
 less@2.7.7
 practicalmeteor:chai
 meteorhacks:aggregate

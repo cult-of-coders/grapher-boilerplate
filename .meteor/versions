@@ -25,7 +25,6 @@ cultofcoders:grapher@1.2.3
 cultofcoders:grapher-live@1.2.3
 cultofcoders:grapher-react@0.0.5
 cultofcoders:meteor-react-routing@1.0.1
-cultofcoders:redis-oplog@1.0.1
 dburles:collection-helpers@1.0.4
 dburles:mongo-collection-instances@0.3.5
 ddp@1.2.5

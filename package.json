@@ -9,6 +9,7 @@
     "test-console-watch": "TEST_WATCH=1 meteor test-packages --driver-package dispatch:mocha-phantomjs packages/grapher"
   },
   "dependencies": {
+    "babel-runtime": "^6.18.0",
     "bcrypt": "^0.8.7",
     "bootstrap": "^3.3.7",
     "faker": "^3.1.0",

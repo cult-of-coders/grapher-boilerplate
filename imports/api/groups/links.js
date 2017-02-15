@@ -7,6 +7,15 @@ Groups.addLinks({
         collection: Users,
         inversedBy: 'groups'
     },
+    members: {
+        type: 'many',
+        collection: Users,
+        field: 'memberIds'
+    },
+    owner: {
+        collection: Users,
+        field: 'ownerId'
+    },
     posts: {
         collection: Posts,
         inversedBy: 'group'

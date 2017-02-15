@@ -1,10 +1,6 @@
 // Helper function to make loading Routes with FlowRouter and React easier
 import route from './lib/router.js';
-
-// Grapher
-import { GrapherLive, GrapherDocumentation } from 'meteor/cultofcoders:grapher-live';
-route('/grapher', GrapherLive);
-route('/grapher-docs', GrapherDocumentation);
+import './grapher-live';
 
 // Others
 import Home from '/imports/ui/Home';
@@ -14,6 +10,3 @@ import PaginateDemo from '/imports/ui/paginate-demo/Wrapper';
 route('/', Home);
 route('/demo', Demo);
 route('/demo-paginate/:page?', PaginateDemo);
-
-
-console.log(route);

@@ -2,6 +2,7 @@ import React from 'react';
 import query from '/imports/api/posts/query/postsWithPagination.js';
 import { createQueryContainer } from 'meteor/cultofcoders:grapher-react';
 import Pagination from "react-js-pagination";
+import { Mod, VentMod } from 'react-mod';
 
 const PostsList = ({data, loading, error}) => {
     if (loading) {
@@ -26,6 +27,13 @@ const PostsList = ({data, loading, error}) => {
         </ul>
     )
 };
+
+class Test extends Mod {
+    init() {
+        console.log('init');
+    }
+}
+
 
 export default class Wrapper extends React.Component {
     constructor() {

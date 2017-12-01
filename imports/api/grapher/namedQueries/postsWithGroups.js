@@ -1,6 +1,6 @@
-import { createNamedQuery } from 'meteor/cultofcoders:grapher';
+import { createQuery } from 'meteor/cultofcoders:grapher';
 
-const query = createNamedQuery('postsWithGroups', {
+const query = createQuery('postsWithGroups', {
     posts: {
         title: 1,
         group: {

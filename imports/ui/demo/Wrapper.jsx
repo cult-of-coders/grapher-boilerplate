@@ -29,7 +29,7 @@ export default class Wrapper extends React.Component {
                 <div style={columnStyle}>
                     <h1>Posts</h1>
                     {this.state.selectedUser
-                        ? <Posts onSelect={this.onSelectPost.bind(this)} params={{ownerId: this.state.selectedUser}} />
+                        ? <Posts onSelect={this.onSelectPost.bind(this)} ownerId={this.state.selectedUser} />
                         : <div>Select a user first</div>
                     }
                 </div>
@@ -37,7 +37,7 @@ export default class Wrapper extends React.Component {
                     <h1>Comments</h1>
 
                     {this.state.selectedPost
-                        ? <PostComments params={{_id: this.state.selectedPost}} />
+                        ? <PostComments postId={this.state.selectedPost} />
                         : <div>Select a post first</div>
                     }
                 </div>

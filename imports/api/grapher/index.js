@@ -1,7 +1,7 @@
 // It is a good idea to import these collections to have them registered
 // Because when we use createQuery({collection: 'xxx'}), it will try to search to see
 // if any collection with that name has been loaded, and it could throw an exception
-import '/imports/api/comments/collection';
+import Comments from '/imports/api/comments/collection';
 import '/imports/api/groups/collection';
 import '/imports/api/posts/collection';
 import '/imports/api/tags/collection';

@@ -2,11 +2,14 @@
   "name": "grapher-boilerplate",
   "private": true,
   "scripts": {
-    "start": "meteor run",
+    "start": "meteor run --port 3000",
     "deploy:qa": "cd .deploy && mup deploy",
-    "test": "meteor test-packages --driver-package practicalmeteor:mocha packages/grapher",
-    "test-console": "meteor --once test-packages --driver-package dispatch:mocha-phantomjs packages/grapher",
-    "test-console-watch": "TEST_WATCH=1 meteor test-packages --driver-package dispatch:mocha-phantomjs packages/grapher"
+    "test": "meteor test-packages --driver-package practicalmeteor:mocha packages/redis-oplog",
+    "test-grapher": "meteor test-packages --driver-package practicalmeteor:mocha packages/grapher",
+    "test-grapher-react": "meteor test-packages --driver-package practicalmeteor:mocha packages/grapher-react",
+    "test-ro": "TEST_BROWSER_DRIVER=chrome CLIENT_TEST_REPORTER='tap' TEST_WATCH=1 meteor test-packages --driver-package meteortesting:mocha packages/redis-oplog",
+    "test-console": "meteor --once test-packages --driver-package meteortesting:mocha packages/grapher",
+    "test-console-watch": "TEST_WATCH=1 meteor test-packages --driver-package meteortesting:mocha packages/grapher"
   },
   "dependencies": {
     "babel-runtime": "^6.18.0",
@@ -15,13 +18,25 @@
     "faker": "^3.1.0",
     "meteor-node-stubs": "~0.2.0",
     "object-sizeof": "^1.1.1",
-    "react": "^15.3.1",
+    "prop-types": "^15.6.0",
     "react-ace": "^3.5.0",
     "react-addons-pure-render-mixin": "^15.3.1",
-    "react-dom": "^15.3.1",
     "react-js-pagination": "^2.0.0",
     "react-json-pretty": "^1.2.1",
     "react-mounter": "^1.2.0",
-    "sift": "^3.2.6"
+    "sift": "^3.2.6",
+    "simpl-schema": "^0.2.2"
+  },
+  "devDependencies": {
+    "buffer": "^5.0.8",
+    "chai": "^4.1.2",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "jest": "^21.2.1",
+    "phantomjs-prebuilt": "^2.1.15",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-unit": "^3.0.2",
+    "sinon": "^4.1.2"
   }
 }

@@ -16,8 +16,17 @@ Users.addLinks({
         collection: Groups,
         field: 'groupIds',
         type: 'many',
-        metadata: {
-            isAdmin: {type: Boolean, optional: true}
+        metadata: true,
+    }
+});
+
+Users.addReducers({
+    email: {
+        body: {
+            emails: 1
+        },
+        reduce(object) {
+            return object.emails[0].address
         }
     }
 });

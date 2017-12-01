@@ -1,12 +1,12 @@
 import React from 'react';
-import { createQueryContainer } from 'meteor/cultofcoders:grapher-react';
+import {withQuery} from 'meteor/cultofcoders:grapher-react';
 import query from '/imports/api/posts/query/postComments.js';
 
 class Comments extends React.Component {
     render() {
-        const {data, loading, error} = this.props;
+        const {data, isLoading, error} = this.props;
 
-        if (loading) {
+        if (isLoading) {
             return <div>Loading</div>
         }
 
@@ -28,7 +28,7 @@ const Comment = ({comment}) => {
     return <li>{comment.text} - by {comment.user.emails[0].address}</li>
 };
 
-export default createQueryContainer(query.clone(), Comments, {
+export default withQuery(({postId}) => query.clone({_id: postId}), {
     reactive: true,
-    single: true // we use this because we expect one object. a post, that contains the comments.
-});
+    single: true
+})(Comments)

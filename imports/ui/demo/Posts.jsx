@@ -1,12 +1,12 @@
 import React from 'react';
-import { createQueryContainer } from 'meteor/cultofcoders:grapher-react';
+import {withQuery} from 'meteor/cultofcoders:grapher-react';
 import query from '/imports/api/posts/query/postsByOwner.js';
 
 class Posts extends React.Component {
     render() {
-        const {data, loading, error} = this.props;
+        const {data, isLoading, error} = this.props;
 
-        if (loading) {
+        if (isLoading) {
             return <div>Loading</div>
         }
 
@@ -30,6 +30,6 @@ const Post = ({post, onClick}) => (
     </li>
 );
 
-export default createQueryContainer(query.clone(), Posts, {
-    reactive: true
-});
+export default withQuery(({ownerId}) => {
+    return query.clone({ownerId})
+}, {reactive: true})(Posts)

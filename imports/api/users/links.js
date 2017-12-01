@@ -16,9 +16,7 @@ Users.addLinks({
         collection: Groups,
         field: 'groupIds',
         type: 'many',
-        metadata: {
-            isAdmin: {type: Boolean, optional: true}
-        }
+        metadata: true,
     }
 });
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import { createQueryContainer } from 'meteor/cultofcoders:grapher-react';
+import {withQuery} from 'meteor/cultofcoders:grapher-react';
 import query from '/imports/api/users/query/allUsers.js';
 
 class Users extends React.Component {
     render() {
-        const {data, loading, error} = this.props;
+        const {data, isLoading, error} = this.props;
 
-        if (loading) {
+        if (isLoading) {
             return <div>Loading</div>
         }
 
@@ -28,6 +28,6 @@ const User = ({user, onClick}) => (
     </li>
 );
 
-export default createQueryContainer(query.clone(), Users, {
-    reactive: true
-});
+export default withQuery(() => {
+    return query.clone()
+}, {reactive: true})(Users)

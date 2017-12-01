@@ -1,6 +1,7 @@
-import { createNamedQuery } from 'meteor/cultofcoders:grapher';
+import { createQuery } from 'meteor/cultofcoders:grapher';
+import {Match} from 'meteor/check';
 
-const query = createNamedQuery('usersWithComments', {
+const query = createQuery('usersWithComments', {
     users: {
         profile: 1,
         comments: {
@@ -16,8 +17,8 @@ const query = createNamedQuery('usersWithComments', {
 
 if (Meteor.isServer) {
     query.expose({
-        schema: {
-            text: {type: String, optional: true}
+        validateParams: {
+            text: Match.Maybe(String)
         }
     })
 }
